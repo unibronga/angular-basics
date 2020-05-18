@@ -1,11 +1,21 @@
-
-
 <h1>{{ smart.title }}</h1>
 <p>{{ 22 + 121 }}</p>
 
-    <app-header></app-header>
-    <app-post></app-post>
-    <app-test></app-test>
-    <app-footer></app-footer>
+<img [src]="img" alt="" />
 
+<p>
+    <label>
+        <input type="text" (keyup)="onKey($event)" />
+        <input type="text" (input)="onInput($event)" />
+    </label>
+</p>
+<p>
+    <strong>{{ inputValue }}</strong>
+</p>
 
+{{setOver()}}
+
+<app-header></app-header>
+<app-post></app-post>
+<app-test></app-test>
+<app-footer></app-footer>
