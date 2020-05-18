@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {log} from "util";
 
 @Component({
     selector: 'app-root',
@@ -35,7 +34,11 @@ export class AppComponent {
         this.inputValue = event.target.value;
     }
 
-    setOver(){
-        return console.log('Hi')
+    onEnter(){
+        return alert('HELLO!')
+    }
+
+    onBlur(str: string){
+        this.smart.title = str
     }
 }

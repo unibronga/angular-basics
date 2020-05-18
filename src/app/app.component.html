@@ -13,7 +13,13 @@
     <strong>{{ inputValue }}</strong>
 </p>
 
-{{setOver()}}
+<label>
+    <input type="text"
+           (keyup.enter)="onEnter()"
+           (blur)="onBlur(myInputID.value)"
+           #myInputID
+    />
+</label>
 
 <app-header></app-header>
 <app-post></app-post>
