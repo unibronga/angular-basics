@@ -2,15 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-root',
-
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
+
+
+
 export class AppComponent {
     title = 'angular-basics';
+
     smart = {
         title: 'User',
-
         text: 'lalalalallalalalalla',
     };
 
@@ -24,6 +26,7 @@ export class AppComponent {
             this.img =
                 'https://pbs.twimg.com/profile_images/1067490244117889029/q3GIYw9I_400x400.jpg';
         }, 5000);
+        console.log("start class AppComponent")
     }
 
     onKey(event: KeyboardEvent) {

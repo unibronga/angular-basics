@@ -1,14 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {element} from "protractor";
 
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.scss']
 })
-export class TestComponent implements OnInit {
+export class TestComponent {
 
-  constructor() { }
-  ngOnInit(): void {
+  constructor() {
+      console.log('start TestComponent')
   }
+
+
+  title: string = ""
+
+
 
 }
