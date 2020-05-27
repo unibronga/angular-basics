@@ -1,5 +1,55 @@
+<div
+    (click)="bg = !bg"
+    [ngStyle]="{
+        width: bg ? '200px' : '300px',
+        height: '50px',
+        borderRadius: '50px',
+        border: '1px solid',
+        margin: '50px auto',
+        background: bg ? '#0090ff' : '#ff00aa',
+        transition: 'all linear 0.3s'
+    }"
+></div>
+
+<div class="ttt" [ngStyle]="{ left: bg ? '-300px' : '0px' }">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, adipisci
+    architecto asperiores consequuntur dignissimos distinctio doloremque
+    doloribus exercitationem facilis fugiat illo inventore laboriosam nihil
+    nulla optio, perspiciatis quia, rem repudiandae.
+</div>
 <div class="post">
-    <h2>Post</h2>
-    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque culpa ea illum ipsum libero magni molestiae nisi officiis pariatur quae quidem quo rem repellendus, tempora veritatis? Adipisci architecto perspiciatis velit!</span><span>Ab accusantium ad aliquam consectetur delectus dolor doloremque ducimus eligendi expedita laborum magnam molestiae molestias necessitatibus nulla officiis praesentium quae quasi quisquam, reiciendis rerum saepe, sit soluta ut vitae voluptates!</span><span>Amet aperiam atque blanditiis cupiditate debitis dolor, doloribus enim eos esse excepturi ipsa ipsam minus nesciunt nobis officia provident quasi quidem quo quos reiciendis repellat repellendus ullam voluptates voluptatibus voluptatum.</span><span>Aliquam, veritatis, vero? Adipisci alias aut beatae consectetur debitis dignissimos, eius eum expedita explicabo fuga iusto minus, modi nesciunt placeat praesentium quam, quidem quis quos rem rerum similique unde voluptatum.</span><span>Accusantium ad aperiam architecto asperiores assumenda consectetur corporis dicta doloremque eaque eligendi error excepturi explicabo facere inventore maiores necessitatibus odit optio porro praesentium quae qui ratione, repudiandae sed voluptas voluptatibus.</span>
+    <h2 (click)="bigText = !bigText" >Post</h2>
+    <p
+        [ngClass]="{
+            big: bigText,
+            small: !bigText
+        }"
+    >
+        <span
+            >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+            culpa ea illum ipsum libero magni molestiae nisi officiis pariatur
+            quae quidem quo rem repellendus, tempora veritatis? Adipisci
+            architecto perspiciatis velit!</span
+        ><span
+            >Ab accusantium ad aliquam consectetur delectus dolor doloremque
+            ducimus eligendi expedita laborum magnam molestiae molestias
+            necessitatibus nulla officiis praesentium quae quasi quisquam,
+            reiciendis rerum saepe, sit soluta ut vitae voluptates!</span
+        ><span
+            >Amet aperiam atque blanditiis cupiditate debitis dolor, doloribus
+            enim eos esse excepturi ipsa ipsam minus nesciunt nobis officia
+            provident quasi quidem quo quos reiciendis repellat repellendus
+            ullam voluptates voluptatibus voluptatum.</span
+        ><span
+            >Aliquam, veritatis, vero? Adipisci alias aut beatae consectetur
+            debitis dignissimos, eius eum expedita explicabo fuga iusto minus,
+            modi nesciunt placeat praesentium quam, quidem quis quos rem rerum
+            similique unde voluptatum.</span
+        ><span
+            >Accusantium ad aperiam architecto asperiores assumenda consectetur
+            corporis dicta doloremque eaque eligendi error excepturi explicabo
+            facere inventore maiores necessitatibus odit optio porro praesentium
+            quae qui ratione, repudiandae sed voluptas voluptatibus.</span
+        >
     </p>
 </div>

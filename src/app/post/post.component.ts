@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {falseIfMissing} from "protractor/built/util";
 
 @Component({
     selector: 'app-post',
@@ -6,4 +7,11 @@ import {Component} from '@angular/core';
     styleUrls: ['./post.component.scss']
 })
 
-export class PostComponent{}
+export class PostComponent{
+
+    bg = false
+    bigText = false
+
+
+
+}

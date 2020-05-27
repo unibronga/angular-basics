@@ -1,27 +1,65 @@
-<h1>{{ smart.title }}</h1>
-<p>{{ 22 + 121 }}</p>
+<!--<h1>{{ smart.title }}</h1>-->
+<!--<p>{{ 22 + 121 }}</p>-->
 
-<img [src]="img" alt="" />
+<!--<img [src]="img" alt="" style="height: 100px" />-->
 
-<p>
-    <label>
-        <input type="text" (keyup)="onKey($event)" />
-        <input type="text" (input)="onInput($event)" />
-    </label>
-</p>
-<p>
-    <strong>{{ inputValue }}</strong>
-</p>
+<!--<p>-->
+<!--    <label>-->
+<!--        <input type="text" (keyup)="onKey($event)" />-->
+<!--        <input type="text" (input)="onInput($event)" />-->
+<!--    </label>-->
+<!--</p>-->
+<!--<p>-->
+<!--    <strong>{{ inputValue }}</strong>-->
+<!--</p>-->
 
-<label>
-    <input type="text"
-           (keyup.enter)="onEnter()"
-           (blur)="onBlur(myInputID.value)"
-           #myInputID
-    />
-</label>
+<!--<label>-->
+<!--    <input type="text"-->
+<!--           (keyup.enter)="onEnter()"-->
+<!--           (blur)="onBlur(myInputID.value)"-->
+<!--           #myInputID-->
+<!--    />-->
+<!--</label>-->
 
-<app-header></app-header>
-<app-post></app-post>
-<app-test></app-test>
-<app-footer></app-footer>
+
+
+<!--<app-header></app-header>-->
+<!--<app-post></app-post>-->
+<!--<app-test></app-test>-->
+<!--<app-footer></app-footer>-->
+
+<!-- ---------------- -->
+
+<!--
+<button (click)="myToggle = !myToggle"> Click me!</button>
+<p *ngIf="myToggle" class="first">Lorem ipsum dolor sit amet,</p>
+<p *ngIf="!myToggle" class="second">Dolore doloremque eos exercitationem facilis fugit ipsum, itaque maiores necessitatibus nemo nulla odit officia pariatur quaerat quasi, reiciendis repudiandae, sequi tempora voluptas!</p>
+
+<p *ngIf="!myToggle; else oneP;">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+<ng-template #oneP>
+    {{ starTest() }}
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, repudiandae.</p>
+</ng-template>
+-->
+
+<!-- ---------------- -->
+
+<button (click)="tab = 1" >first</button>
+<button (click)="tab = 2" >second</button>
+<button (click)="tab = 3" >third</button>
+<div [ngSwitch]="tab" >
+    <p *ngSwitchCase="1"> первый текст Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, perspiciatis.
+    </p>
+    <p *ngSwitchCase="2"> второй текст Lorem ipsum.</p>
+    <p *ngSwitchCase="3"> третий текст Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores commodi deleniti dolorum est eveniet in ipsum, iure nemo placeat praesentium quod.</p>
+</div>
+
+<ul>
+    <li *ngFor="let n of testArray">{{ n }}</li>
+</ul>
+
+{{ now | date}}
+
+
+
