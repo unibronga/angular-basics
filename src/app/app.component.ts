@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
     title = 'angular-basics';
-    now : Date = new Date().toString();
+    now : Date = new Date();
 
     smart = {
         title: 'User',
