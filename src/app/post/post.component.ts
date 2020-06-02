@@ -1,17 +1,22 @@
-import {Component} from '@angular/core';
-import {falseIfMissing} from "protractor/built/util";
+import {Component, Input} from '@angular/core';
+import {TypePost} from "../app.component";
+
 
 @Component({
-    selector: 'app-post',
-    templateUrl: './post.component.html',
-    styleUrls: ['./post.component.scss']
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.scss']
 })
 
-export class PostComponent{
+export class PostComponent  {
 
-    bg = false
-    bigText = false
+    @Input('mandaPost') myPost: TypePost
+    @Input() myTest: string
 
+  constructor() {
 
+  }
 
 }
+
+/* 4) 13 строка -  передаю объект myPost с помощью декоратора @Input */
