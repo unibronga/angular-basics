@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
-export interface TypePost {
+export interface Post {
     title: string;
     text: string;
     id?: any
 }
+
+
 
 @Component({
     selector: 'app-root',
@@ -13,9 +15,9 @@ export interface TypePost {
 })
 export class AppComponent {
 
-    test:string = 'Мой тест'
+    testTest:string = 'Мой тест'
 
-    posts: TypePost[] = [
+    posts: Post[] = [
         {title:'First news', text:'Я хочу выучить Angular компоненты', id:1},
         {title:'Second news', text:'Я хочу выучить Angular модул  пайпы', id:2},
         {title:'Third news', text:'Я хочу выучить много всего ))', id:3},
