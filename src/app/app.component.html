@@ -1,15 +1,16 @@
 <div class="container">
 
     <h1>Hello</h1>
-    <app-post-form></app-post-form>
+    <app-post-form
+        (onAdd)="updatePosts($event)"
+    ></app-post-form>
     <hr />
     <app-post
         *ngFor="let p of posts"
-        [megaPost]="p"
+        [postObject]="p"
 
-        [testTest]="testTest"
+        [myDataTag]="myData.join(' ')"
     ></app-post>
-
 </div>
 
 <!--  3) 7 строка -  перебираю массив объектов posts и на каждой итерации вывожу "р" объект-->

@@ -10,8 +10,8 @@ import {Post} from "../app.component";
 
 export class PostComponent  {
 
-    @Input('megaPost') myPost: Post
-    @Input('testTest') myTest: string
+    @Input('postObject') myPost: Post
+    @Input('myDataTag') myDataTagPushed: string
 
   constructor() {
 

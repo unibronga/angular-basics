@@ -1,9 +1,9 @@
 <div>
 <label>
-    <input class="form-control" type="text" placeholder="Title">
+    <input class="form-control" type="text" placeholder="Title" [(ngModel)]="postTitle" >
 </label>
 <label>
-    <input class="form-control" type="text" placeholder="text">
+    <input class="form-control" type="text" placeholder="text" [(ngModel)]="postText">
 </label>
-<button class="btn">Отправить</button>
+<button class="btn" (click)="addPost()" >Отправить</button>
 </div>

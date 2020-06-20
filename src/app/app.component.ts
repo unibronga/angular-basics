@@ -5,17 +5,15 @@ export interface Post {
     text: string;
     id?: any
 }
-
-
-
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
-    testTest:string = 'Мой тест'
+    myData: Array<string> = [
+        'Hello', 'My', 'Friends'
+    ]
 
     posts: Post[] = [
         {title:'First news', text:'Я хочу выучить Angular компоненты', id:1},
@@ -24,9 +22,12 @@ export class AppComponent {
     ]
 
 
+    updatePosts(newPost: Post){
+        this.posts.unshift(newPost)
+    }
 
 }
 
 
-/* 1) 3 строка -  создаю (инетерфейс) свой тип TypePost */
+/* 1) 3 строка -  создаю (инетерфейс) свой тип Post */
 /* 2) 16 строка -  создаю массив объектов со своим типом */
