@@ -11,7 +11,7 @@ import {Post} from "../app.component";
 export class PostComponent  {
 
     @Input('postObject') myPost: Post
-    @Input('myDataTag') myDataTagPushed: string
+    @Input() myDataTag: string
 
   constructor() {
 

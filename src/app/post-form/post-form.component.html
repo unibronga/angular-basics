@@ -1,9 +1,10 @@
 <div>
 <label>
-    <input class="form-control" type="text" placeholder="Title" [(ngModel)]="postTitle" >
+    <input class="form-control" type="text" placeholder="Title" [(ngModel)]="postTitle" #myInput01 >
 </label>
 <label>
     <input class="form-control" type="text" placeholder="text" [(ngModel)]="postText">
 </label>
-<button class="btn" (click)="addPost()" >Отправить</button>
+    <button class="btn" (click)="addPost()" >Отправить</button>
+    <button class="btn" (click)="onFocus()" >focus</button>
 </div>

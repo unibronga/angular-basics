@@ -11,6 +11,7 @@ export interface Post {
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+
     myData: Array<string> = [
         'Hello', 'My', 'Friends'
     ]
