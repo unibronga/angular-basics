@@ -1,27 +1,23 @@
-<h1>{{ smart.title }}</h1>
-<p>{{ 22 + 121 }}</p>
-
-<img [src]="img" alt="" />
-
-<p>
-    <label>
-        <input type="text" (keyup)="onKey($event)" />
-        <input type="text" (input)="onInput($event)" />
-    </label>
-</p>
-<p>
-    <strong>{{ inputValue }}</strong>
-</p>
-
-<label>
-    <input type="text"
-           (keyup.enter)="onEnter()"
-           (blur)="onBlur(myInputID.value)"
-           #myInputID
-    />
-</label>
 
 <app-header></app-header>
 <app-post></app-post>
-<app-test></app-test>
 <app-footer></app-footer>
+
+
+
+
+<label>
+    <input type="text"
+           #myInput
+           (input)="testMethod(myInput.value)"
+    >
+</label>
+
+<label>
+    <input type="text" [value] = "myTitle" >
+</label>
+
+<label>
+    <input type="text" [(ngModel)]="myInput2">
+</label>
+<h1>{{myInput2}}</h1>
