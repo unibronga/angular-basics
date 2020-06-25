@@ -37,4 +37,9 @@ export class PostFormComponent {
   }
 
 
+    counter: number = 0
+
+    plus(){ this.counter++ }
+    minus(){ this.counter--}
+
 }

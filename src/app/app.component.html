@@ -3,14 +3,37 @@
     <h1>Hello</h1>
     <app-post-form
         (onAdd)="updatePosts($event)"
+        #counter
     ></app-post-form>
+
+    <button class="btn" (click)="counter.plus()">+</button>
+    <button class="btn" (click)="counter.minus()">-</button>
     <hr />
+
     <app-post
         *ngFor="let p of posts"
         [postObject]="p"
-
         [myDataTag]="myData.join(' ')"
-    ></app-post>
+        (onRemove)="removePost(p.id)"
+    >
+
+        <div #info>
+            <p *ngIf="p.text.length > 10; else short">пост длинный</p>
+            <ng-template #short>
+                <p>пост короткий</p>
+            </ng-template>
+        </div>
+
+
+
+    </app-post>
+
+
+    <hr>
+
+
+
+
 </div>
 
 <!--  3) 7 строка -  перебираю массив объектов posts и на каждой итерации вывожу "р" объект-->

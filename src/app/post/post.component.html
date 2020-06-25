@@ -2,6 +2,9 @@
     <h2>{{myPost.title}}</h2>
     <strong>{{myPost.id}}</strong>
     <p>{{myPost.text}}</p>
-
+    <ng-content></ng-content>
     <h3>{{myDataTag}}</h3>
+    <button (click)="removePost($event)" class="btn">&times;</button>
+
 </div>
+
