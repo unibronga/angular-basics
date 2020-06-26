@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-basics';
+
+  title = 'Angular-Directive';
+  visible : boolean = true;
+  toggleTab: boolean = true;
+
+
+
+  contentClass = {
+    content: true,
+    box2: true
+  }
+
+    myTab(){
+        this.visible = !this.visible;
+        this.toggleTab = !this.toggleTab;
+        this.contentClass.box2 = !this.contentClass.box2
+
+  }
+
+
 }
