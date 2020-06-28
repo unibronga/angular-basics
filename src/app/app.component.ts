@@ -26,5 +26,7 @@ export class AppComponent {
   stop(){
       this.sub.unsubscribe()
   }
+
+
 }
 
